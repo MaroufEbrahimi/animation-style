@@ -5,22 +5,62 @@
 }
 
 .boxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #2d2d2e;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin: 20px;
 }
 
 .boxes .box {
   position: relative;
-  width: 300px;
-  height: 400px;
-  margin-left: 50px;
-  background: rgb(1, 1, 43);
+  height: 280px;
+  background: rgb(239, 239, 241);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
+}
+
+.boxes .box::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(transparent, transparent, transparent, #f107d2);
+  animation: anima 4s linear infinite;
+  animation-delay: 1s;
+}
+
+.boxes .box::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(transparent, transparent, transparent, #0994f3);
+  animation: anima 4s linear infinite;
+}
+
+/* @keyframes anima {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(260deg);
+  }
+} */
+
+.boxes .box span {
+  position: absolute;
+  inset: 3px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.boxes .box h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 2em;
+  color: #000000;
 }
