@@ -3,3 +3,24 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2d2d2e;
+}
+
+.boxes .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin-left: 50px;
+  background: rgb(1, 1, 43);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
