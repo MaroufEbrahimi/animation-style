@@ -25,8 +25,8 @@
 .boxes .box::after {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   background: conic-gradient(transparent, transparent, transparent, #f107d2);
   animation: anima 4s linear infinite;
   animation-delay: 1s;
@@ -35,8 +35,8 @@
 .boxes .box::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   background: conic-gradient(transparent, transparent, transparent, #0994f3);
   animation: anima 4s linear infinite;
 }
@@ -58,9 +58,17 @@
   z-index: 1;
 }
 
-.boxes .box h3 {
+.boxes .box div {
   position: relative;
   z-index: 2;
   font-size: 2em;
   color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.boxes .box div p {
+   font-size: 16px;
 }
