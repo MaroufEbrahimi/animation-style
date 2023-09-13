@@ -1,20 +1,33 @@
+@font-face {
+  font-family: pacifico;
+  src: url("./font/pacifico/Pacifico-Regular.ttf");
+}
+
+@font-face {
+  font-family: poppins;
+  src: url("./font/Poppins/Poppins-Regular.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #1b1b1b;
+}
 
 .boxes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  margin: 20px;
+  gap: 0.8rem;
+  margin: 100px;
 }
 
 .boxes .box {
   position: relative;
-  height: 280px;
-  background: rgb(239, 239, 241);
+  height: 180px;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,20 +54,20 @@
   animation: anima 4s linear infinite;
 }
 
-/* @keyframes anima {
+@keyframes anima {
   0% {
     transform: rotate(0deg);
   }
   30% {
     transform: rotate(260deg);
   }
-} */
+}
 
 .boxes .box span {
   position: absolute;
   inset: 3px;
   border-radius: 10px;
-  background-color: #e0e0e0;
+  background-color: #000;
   z-index: 1;
 }
 
@@ -69,6 +82,56 @@
   flex-direction: column;
   padding: 10px;
 }
+.boxes .box div h4 {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+  color: #fff;
+  font-family: "poppins";
+}
 .boxes .box div p {
-   font-size: 16px;
+  font-size: 12px;
+  padding-top: 10px;
+  color: #ccc;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  font-family: "poppins";
+}
+
+.name {
+  position: absolute;
+  left: 100px;
+  bottom: 65px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name img {
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+}
+.name h1 {
+  font-family: "pacifico";
+  color: #fff;
+  animation: ani 3s infinite;
+  font-size: 22px;
+}
+
+@keyframes ani {
+  0%,
+  39%,
+  41%,
+  59%,
+  61%,
+  100% {
+    text-shadow: #fff 0 0 10px, #ff3aad 0 0 20px, #ff3aad 0 0 36px;
+  }
+
+  40%,
+  60% {
+    text-shadow: none;
+  }
 }
